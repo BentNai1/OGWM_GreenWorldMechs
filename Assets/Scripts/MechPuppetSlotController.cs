@@ -8,10 +8,10 @@ public class MechPuppetSlotController : MonoBehaviour
 
     private void OnValidate()
     {
-        if (_mechPuppetPart & _spriteRenderer)
-            UpdateSprite();
-        else
-            Debug.Log("Missing component(s) on MechPuppetSlotController");
+        //if (_mechPuppetPart & _spriteRenderer)
+        //    UpdateSprite();
+        //else
+        //    Debug.Log("Missing component(s) on MechPuppetSlotController");
     }
 
     void Start()
@@ -25,7 +25,7 @@ public class MechPuppetSlotController : MonoBehaviour
         
     }
 
-    void UpdateSprite()
+    public void UpdateSprite()
     {
         _spriteRenderer.sprite = _mechPuppetPart.sprite;
     }

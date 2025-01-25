@@ -484,6 +484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 265277902}
+  - component: {fileID: 265277903}
   m_Layer: 0
   m_Name: MechPuppet
   m_TagString: Untagged
@@ -514,6 +515,25 @@ Transform:
   - {fileID: 420796454}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &265277903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265277901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90f44477513e25a488289c69223bc09f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mechPuppetSlotControllers:
+  - {fileID: 556963555}
+  - {fileID: 37636825}
+  - {fileID: 1254376617}
+  - {fileID: 335093802}
+  - {fileID: 1013578769}
+  - {fileID: 1083410877}
 --- !u!1 &335093800
 GameObject:
   m_ObjectHideFlags: 0
