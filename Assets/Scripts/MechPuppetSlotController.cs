@@ -6,13 +6,13 @@ public class MechPuppetSlotController : MonoBehaviour
     [SerializeField] private SpriteRenderer _spriteRenderer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    private void OnValidate()
-    {
-        //if (_mechPuppetPart & _spriteRenderer)
-        //    UpdateSprite();
-        //else
-        //    Debug.Log("Missing component(s) on MechPuppetSlotController");
-    }
+    //private void OnValidate()
+    //{
+    //if (_mechPuppetPart & _spriteRenderer)
+    //    UpdateSprite();
+    //else
+    //    Debug.Log("Missing component(s) on MechPuppetSlotController");
+    //}
 
     void Start()
     {
@@ -27,6 +27,7 @@ public class MechPuppetSlotController : MonoBehaviour
 
     public void UpdateSprite()
     {
-        _spriteRenderer.sprite = _mechPuppetPart.sprite;
+        if (_mechPuppetPart & _spriteRenderer)
+            _spriteRenderer.sprite = _mechPuppetPart.sprite;
     }
 }

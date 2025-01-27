@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class MechPuppetPartController : MonoBehaviour
 {
-    public enum PartType { Legs, Core, Head, RArm, LArm, LWeapon, RWeapon, RShoulder, LShoulder, Generator, Targetting, Booster, Extension, Ground_NotAPart}
+    public enum PartType { Legs, Core, Head, RArm, LArm, LWeapon, RWeapon, RShoulder, LShoulder, Generator, Targetting, Booster, Extension, Ground_NotAPart, Empty_NotAPart}
 
     [SerializeField] private PartType _partType;
     public PartType partType
@@ -15,11 +15,13 @@ public class MechPuppetPartController : MonoBehaviour
     public PartType[] hardPoints
     {
         get { return _hardPoints; }
+        set { _hardPoints = value; }
     }
     [SerializeField] private Vector2[] _hardPointPositions; // Positions relative to the object
     public Vector2[] hardPointPositions
     {
         get { return _hardPointPositions; }
+        set { _hardPointPositions = value; }
     }
     [SerializeField] private Sprite _sprite;
     public Sprite sprite
@@ -44,6 +46,8 @@ public class MechPuppetPartController : MonoBehaviour
         { PartType.Targetting, new PartType[] { PartType.Core} },
         { PartType.Booster, new PartType[] { PartType.Legs} },
         { PartType.Extension, new PartType[] { PartType.Core} },
+        { PartType.Ground_NotAPart, new PartType[] { PartType.Legs} },
+        { PartType.Empty_NotAPart, new PartType[] {} },
     };
 
     // Define colors for each PartType
@@ -80,18 +84,5 @@ public class MechPuppetPartController : MonoBehaviour
                 _hardPointPositions = new Vector2[_hardPoints.Length];
             }
         }
-    }
-
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
