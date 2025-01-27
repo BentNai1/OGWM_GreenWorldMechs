@@ -48,6 +48,8 @@ public class MechPuppetPartControllerEditor : Editor
 
         EditorGUILayout.PropertyField(serializedObject.FindProperty("_partType"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("_sprite"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("flipXSprite"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("flipYSprite"));
 
         SerializedProperty hardPointsProp = serializedObject.FindProperty("_hardPoints");
         SerializedProperty positionsProp = serializedObject.FindProperty("_hardPointPositions");
@@ -83,47 +85,4 @@ public class MechPuppetPartControllerEditor : Editor
 
         serializedObject.ApplyModifiedProperties();
     }
-
-
-//private void OnSceneGUI()
-//    {
-//        MechPuppetPartController mechPuppetPartController = (MechPuppetPartController)target;
-
-//        if (mechPuppetPartController.hardPoints == null || mechPuppetPartController.hardPointPositions == null)
-//            return;
-
-//        Transform transform = mechPuppetPartController.transform;
-
-//        // Iterate over the hardpoints and display their markers and labels in the scene view
-//        for (int i = 0; i < mechPuppetPartController.hardPoints.Length; i++)
-//        {
-//            MechPuppetPartController.PartType hardPoint = mechPuppetPartController.hardPoints[i];
-
-//            // Skip NotAPart types
-//            if (hardPoint == MechPuppetPartController.PartType.Ground_NotAPart || hardPoint == MechPuppetPartController.PartType.Empty_NotAPart)
-//                continue;
-
-//            Vector2 localPosition = mechPuppetPartController.hardPointPositions[i];
-//            Vector3 worldPosition = transform.position + (Vector3)localPosition;
-
-//            // Get color from dictionary
-//            Color pointColor = mechPuppetPartController.partColors.ContainsKey(hardPoint) ? mechPuppetPartController.partColors[hardPoint] : Color.white;
-//            Handles.color = pointColor;
-
-//            // Draw a sphere marker at the world position
-//            Handles.DrawSolidDisc(worldPosition, Vector3.forward, 0.1f);
-
-//            // Draw a label with the part type
-//            Handles.Label(worldPosition + Vector3.up * 0.15f, hardPoint.ToString(), new GUIStyle() { normal = new GUIStyleState() { textColor = pointColor } });
-
-//            // Allow user to move marker in Scene View
-//            EditorGUI.BeginChangeCheck();
-//            Vector3 newWorldPos = Handles.PositionHandle(worldPosition, Quaternion.identity);
-//            if (EditorGUI.EndChangeCheck())
-//            {
-//                Undo.RecordObject(mechPuppetPartController, "Move Hardpoint Position");
-//                mechPuppetPartController.hardPointPositions[i] = newWorldPos - transform.position;
-//            }
-//        }
-//    }
 }

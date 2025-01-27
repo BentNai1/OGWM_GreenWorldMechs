@@ -29,5 +29,7 @@ public class MechPuppetSlotController : MonoBehaviour
     {
         if (_mechPuppetPart & _spriteRenderer)
             _spriteRenderer.sprite = _mechPuppetPart.sprite;
+        _spriteRenderer.flipX = _mechPuppetPart.flipXSprite;
+        _spriteRenderer.flipY = _mechPuppetPart.flipYSprite;
     }
 }

@@ -4,9 +4,13 @@ using System.Collections.Generic;
 
 public class MechPuppetPartController : MonoBehaviour
 {
+    //custom inspector elements at play here - see MechPuppetControllerEditor.cs
     public enum PartType { Legs, Core, Head, RArm, LArm, LWeapon, RWeapon, RShoulder, LShoulder, Generator, Targetting, Booster, Extension, Ground_NotAPart, Empty_NotAPart}
 
     [SerializeField] private PartType _partType;
+#if UNITY_EDITOR
+    private PartType _previousPartType; // Store the previous PartType to detect changes
+#endif
     public PartType partType
     {
         get { return _partType; }
@@ -23,11 +27,17 @@ public class MechPuppetPartController : MonoBehaviour
         get { return _hardPointPositions; }
         set { _hardPointPositions = value; }
     }
+
     [SerializeField] private Sprite _sprite;
     public Sprite sprite
     {
         get { return _sprite; }
     }
+    public bool flipXSprite;
+    public bool flipYSprite;
+
+    
+
 
     #region Inspector Autofill Dictionaries
     //for setting defaults
@@ -69,20 +79,40 @@ public class MechPuppetPartController : MonoBehaviour
     };
     #endregion
 
+#if UNITY_EDITOR
     private void OnValidate()
     {
-        if (defaultHardPoints.TryGetValue(_partType, out PartType[] defaults))
+        if (_partType != _previousPartType)
         {
-            _hardPoints = defaults; // Assign default hardpoints when _partType changes
-        }
-
-        // Ensure _hardPointPositions matches _hardPoints length
-        if (_hardPoints != null)
-        {
-            if (_hardPointPositions == null || _hardPointPositions.Length != _hardPoints.Length)
+            _previousPartType = _partType; // Update the previous part type
+            if (defaultHardPoints.TryGetValue(_partType, out PartType[] defaults))
             {
-                _hardPointPositions = new Vector2[_hardPoints.Length];
+                _hardPoints = defaults; // Assign default hardpoints when _partType changes
             }
+
+            // Ensure _hardPointPositions matches _hardPoints length
+            if (_hardPoints != null)
+            {
+                if (_hardPointPositions == null || _hardPointPositions.Length != _hardPoints.Length)
+                {
+                    _hardPointPositions = new Vector2[_hardPoints.Length];
+                }
+            }
+            UpdateFlipXSprite();  // Make sure flipXSprite is updated every time a new part is selected
+        }
+    }
+#endif
+
+    private void UpdateFlipXSprite()
+    {
+        // Automatically flip the sprite for "R" parts
+        if (_partType.ToString().StartsWith("R"))
+        {
+            flipXSprite = true;
+        }
+        else
+        {
+            flipXSprite = false;
         }
     }
 }
