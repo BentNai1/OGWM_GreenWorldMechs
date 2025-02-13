@@ -3,6 +3,8 @@ using UnityEngine;
 public class MechPuppetController : MonoBehaviour
 {
     [SerializeField] MechPuppetSlotController[] mechPuppetSlotControllers;
+
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,7 +22,7 @@ public class MechPuppetController : MonoBehaviour
     {
         foreach (var item in mechPuppetSlotControllers)
         {
-            item.UpdateSprite();
+            item.UpdateSprite(this);
         }
     }
 }

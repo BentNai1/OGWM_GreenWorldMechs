@@ -103,7 +103,7 @@ public class MechPuppetPartController : MonoBehaviour
     }
 #endif
 
-    private void UpdateFlipXSprite()
+    public void UpdateFlipXSprite()
     {
         // Automatically flip the sprite for "R" parts
         if (_partType.ToString().StartsWith("R"))
@@ -114,5 +114,17 @@ public class MechPuppetPartController : MonoBehaviour
         {
             flipXSprite = false;
         }
+    }
+
+    public bool HasHardpointAsPartType(PartType hardPointToHave, PartType partTypeToBe)
+    {
+        if (partTypeToBe != _partType)
+            return false;
+        foreach (var item in _hardPoints)
+        {
+            if (item == hardPointToHave)
+                return true;
+        }
+        return false;
     }
 }

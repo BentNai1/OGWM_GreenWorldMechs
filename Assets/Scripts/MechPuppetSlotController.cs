@@ -24,8 +24,12 @@ public class MechPuppetSlotController : MonoBehaviour
     {
         
     }
+    public MechPuppetPartController GetPartController()
+    {
+        return _mechPuppetPart;
+    }
 
-    public void UpdateSprite()
+    public void UpdateSprite(MechPuppetController callingController)
     {
         if (_mechPuppetPart & _spriteRenderer)
             _spriteRenderer.sprite = _mechPuppetPart.sprite;
