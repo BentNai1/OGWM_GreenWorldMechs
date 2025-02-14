@@ -127,4 +127,22 @@ public class MechPuppetPartController : MonoBehaviour
         }
         return false;
     }
+
+    /// <summary>
+    /// Checks if part has no valid hardpoints or is an empty part
+    /// </summary>
+    /// <returns></returns>
+    public bool IsNotAValidPart()
+    {
+        if (_partType == PartType.Empty_NotAPart)
+            return true;
+
+        foreach (var item in _hardPoints)
+        {
+            //has a valid hardpoint? return false
+            if (item != PartType.Empty_NotAPart)
+                return false;
+        }
+        return true;
+    }
 }

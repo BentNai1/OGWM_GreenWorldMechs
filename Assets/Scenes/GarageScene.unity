@@ -235,6 +235,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
+      propertyPath: '_hardPoints.Array.data[0]'
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.size
       value: 1
       objectReference: {fileID: 0}
