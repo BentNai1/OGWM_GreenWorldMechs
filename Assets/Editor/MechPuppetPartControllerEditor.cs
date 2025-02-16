@@ -71,7 +71,7 @@ public class MechPuppetPartControllerEditor : Editor
             EditorGUILayout.PropertyField(hardPoint, GUIContent.none);
 
             MechPuppetPartController.PartType selectedType = (MechPuppetPartController.PartType)hardPoint.enumValueIndex;
-            if (!selectedType.ToString().Contains("NotAPart"))
+            if (!selectedType.ToString().Contains("Empty"))
             {
                 EditorGUILayout.PropertyField(position, GUIContent.none);
             }
@@ -80,9 +80,47 @@ public class MechPuppetPartControllerEditor : Editor
                 EditorGUILayout.LabelField("(No Position)", GUILayout.Width(100));
             }
 
+            // Add a remove button for each hardpoint
+            if (GUILayout.Button("X", GUILayout.Width(20)))
+            {
+                hardPointsProp.DeleteArrayElementAtIndex(i);
+                positionsProp.DeleteArrayElementAtIndex(i);
+                serializedObject.ApplyModifiedProperties();
+                return; // Prevents iterating over a modified list
+            }
+
             EditorGUILayout.EndHorizontal();
         }
 
+        // Add and Remove Buttons
+        EditorGUILayout.Space();
+        EditorGUILayout.BeginHorizontal();
+
+        if (GUILayout.Button("Add Hardpoint"))
+        {
+            hardPointsProp.arraySize++;
+            positionsProp.arraySize++;
+
+            // Initialize new hardpoint with default values
+            SerializedProperty newHardPoint = hardPointsProp.GetArrayElementAtIndex(hardPointsProp.arraySize - 1);
+            newHardPoint.enumValueIndex = 0; // Set default enum index
+
+            SerializedProperty newPosition = positionsProp.GetArrayElementAtIndex(positionsProp.arraySize - 1);
+            newPosition.vector2Value = Vector2.zero; // Default position
+
+            serializedObject.ApplyModifiedProperties();
+        }
+
+        if (GUILayout.Button("Remove Last Hardpoint") && hardPointsProp.arraySize > 0)
+        {
+            hardPointsProp.arraySize--;
+            positionsProp.arraySize--;
+            serializedObject.ApplyModifiedProperties();
+        }
+
+        EditorGUILayout.EndHorizontal();
+
         serializedObject.ApplyModifiedProperties();
     }
+
 }

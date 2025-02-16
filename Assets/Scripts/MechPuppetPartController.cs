@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
+using System.Linq;
 
 public class MechPuppetPartController : MonoBehaviour
 {
@@ -103,6 +104,9 @@ public class MechPuppetPartController : MonoBehaviour
     }
 #endif
 
+    /// <summary>
+    /// Reads the name of the part, flips along x axis if it starts with "R".
+    /// </summary>
     public void UpdateFlipXSprite()
     {
         // Automatically flip the sprite for "R" parts
@@ -116,6 +120,12 @@ public class MechPuppetPartController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Returns true if is requested part that also has a requested compatible hardpoint.
+    /// </summary>
+    /// <param name="hardPointToHave"></param>
+    /// <param name="partTypeToBe"></param>
+    /// <returns></returns>
     public bool HasHardpointAsPartType(PartType hardPointToHave, PartType partTypeToBe)
     {
         if (partTypeToBe != _partType)
@@ -129,12 +139,14 @@ public class MechPuppetPartController : MonoBehaviour
     }
 
     /// <summary>
-    /// Checks if part has no valid hardpoints or is an empty part
+    /// Returns true if part has no valid hardpoints or is an empty part
     /// </summary>
     /// <returns></returns>
     public bool IsNotAValidPart()
     {
         if (_partType == PartType.Empty_NotAPart)
+            return true;
+        if (_hardPoints.Count() == 0)
             return true;
 
         foreach (var item in _hardPoints)
