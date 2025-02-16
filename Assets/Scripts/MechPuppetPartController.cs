@@ -157,4 +157,37 @@ public class MechPuppetPartController : MonoBehaviour
         }
         return true;
     }
+
+    public Vector2 GetHardpointPosition(PartType hardPoint)
+    {
+        if (_hardPoints == null || _hardPointPositions == null)
+            return Vector2.zero;
+
+        for (int i = 0; i < _hardPoints.Length; i++)
+        {
+            if (_hardPoints[i] == hardPoint)
+            {
+                return _hardPointPositions[i];
+            }
+        }
+
+        return Vector2.zero; // Return default value if the hardpoint isn't found
+    }
+
+    public Vector3 GetHardpointPositionV3(PartType hardPoint)
+    {
+        if (_hardPoints == null || _hardPointPositions == null)
+            return Vector3.zero;
+
+        for (int i = 0; i < _hardPoints.Length; i++)
+        {
+            if (_hardPoints[i] == hardPoint)
+            {
+                Vector3 vector3 = new Vector3(_hardPointPositions[i].x, _hardPointPositions[i].y, 0);
+                return vector3;
+            }
+        }
+
+        return Vector3.zero; // Return default value if the hardpoint isn't found
+    }
 }

@@ -96,7 +96,6 @@ public class MechPuppetController : MonoBehaviour
         //Main placement loop
         while (_slotsPlaced.Count > 0 && foundMatch)
         {
-            Debug.Log("Main loop iteration, placed slot count: " + _slotsPlaced.Count);
             foundMatch = false; // a successful find sets this to true, allowing a new loop - otherwise prevents infinite while loops
 
             //loop through placed slots...
@@ -113,8 +112,13 @@ public class MechPuppetController : MonoBehaviour
                         //... looking for an unplaced slot to match curent hardpoint of placed slot.
                         if (pendingSlot.GetPartController().HasHardpointAsPartType(i_slot.GetPartController().partType, hardpointToQuery))
                         {
+                            //offset position of pending from hardpoint
+                            Vector3 pendingOffsetPos = pendingSlot.transform.position + pendingSlot.GetPartController().GetHardpointPositionV3(i_slot.GetPartController().partType);
+                            //target to move to (i_slots position with hardpoint offset)
+                            Vector3 targetOffsetPos = i_slot.transform.position + i_slot.GetPartController().GetHardpointPositionV3(pendingSlot.GetPartController().partType);
                             //move sprite location to match slot
-
+                            Debug.Log(pendingSlot.gameObject.name+", pending pos/ target pos: " + pendingOffsetPos + ", " + targetOffsetPos + ", vector: " + (targetOffsetPos - pendingOffsetPos));
+                            pendingSlot.transform.position += targetOffsetPos - pendingOffsetPos;
 
                             //move placed slot to other list
                             _slotsToAdd.Add(pendingSlot);

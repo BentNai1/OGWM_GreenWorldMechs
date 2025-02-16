@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 37636823}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.11598909, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -589,7 +589,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[0].x
-      value: -1.14
+      value: -1.0748707
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
+      propertyPath: _hardPointPositions.Array.data[0].y
+      value: 0.03711462
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
+      propertyPath: _hardPointPositions.Array.data[1].x
+      value: 0.702147
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
+      propertyPath: _hardPointPositions.Array.data[1].y
+      value: -0.6218109
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -704,7 +716,7 @@ Transform:
   m_GameObject: {fileID: 335093800}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.39, y: 0, z: 0}
+  m_LocalPosition: {x: -2.4561996, y: -0.28605068, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -935,7 +947,7 @@ Transform:
   m_GameObject: {fileID: 556963553}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.1, z: 0}
+  m_LocalPosition: {x: 0, y: -2.9999995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1397,6 +1409,10 @@ PrefabInstance:
       propertyPath: _hardPointPositions.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
+      propertyPath: _hardPointPositions.Array.data[0].y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1449,7 +1465,7 @@ Transform:
   m_GameObject: {fileID: 996590626}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.6959891, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1496,7 +1512,7 @@ Transform:
   m_GameObject: {fileID: 1013578767}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.35, y: 2, z: 0}
+  m_LocalPosition: {x: 1.3120474, y: 1.1209321, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1543,7 +1559,7 @@ Transform:
   m_GameObject: {fileID: 1083410875}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.97, y: 2.15, z: 0}
+  m_LocalPosition: {x: -1.3632606, y: 1.0793293, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1677,7 +1693,7 @@ Transform:
   m_GameObject: {fileID: 1254376615}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.14, y: 0, z: 0}
+  m_LocalPosition: {x: 2.3822365, y: -0.2531037, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1716,7 +1732,7 @@ PrefabInstance:
       objectReference: {fileID: 8455272843721330403, guid: 169dd451a1d8ed54a83e00cc2246ceab, type: 3}
     - target: {fileID: 3598822559263099317, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3598822559263099317, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1772,7 +1788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: '_hardPoints.Array.data[1]'
-      value: 14
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: '_hardPoints.Array.data[2]'
@@ -1828,35 +1844,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[2].x
-      value: 1.3754047
+      value: -1.3156911
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[2].y
-      value: -0.1
+      value: -0.10369255
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[3].x
-      value: -1.3832481
+      value: 1.3073657
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[3].y
-      value: -0.1
+      value: -0.099999994
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[4].x
-      value: 1.1025747
+      value: -0.8832606
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[4].y
-      value: 0.6450987
+      value: 0.47297078
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[5].x
-      value: -0.96000004
+      value: 0.874653
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[5].y
-      value: 0.45756453
+      value: 0.5971277
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[6].x
@@ -2006,7 +2022,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[0].x
-      value: 1.13
+      value: 1.1405084
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
+      propertyPath: _hardPointPositions.Array.data[0].y
+      value: 0.06636906
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
+      propertyPath: _hardPointPositions.Array.data[1].x
+      value: -1.0239656
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
+      propertyPath: _hardPointPositions.Array.data[1].y
+      value: -0.29999352
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
