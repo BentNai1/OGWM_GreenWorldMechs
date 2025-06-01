@@ -46,6 +46,24 @@ public class MechPuppetPartControllerEditor : Editor
 
         serializedObject.Update();
 
+        // Save and Load buttons
+        
+        EditorGUILayout.BeginHorizontal();
+
+        if (GUILayout.Button("Save"))
+        {
+            
+        }
+
+        if (GUILayout.Button("Load"))
+        {
+            
+        }
+
+        EditorGUILayout.EndHorizontal();
+        EditorGUILayout.Space();
+
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("_partName"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("_partType"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("_sprite"));
         EditorGUILayout.PropertyField(serializedObject.FindProperty("flipXSprite"));

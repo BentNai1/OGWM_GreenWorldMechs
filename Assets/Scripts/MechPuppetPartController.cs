@@ -12,6 +12,8 @@ public class MechPuppetPartController : MonoBehaviour
 #if UNITY_EDITOR
     private PartType _previousPartType; // Store the previous PartType to detect changes
 #endif
+    [SerializeField] private string _partName;
+
     public PartType partType
     {
         get { return _partType; }
