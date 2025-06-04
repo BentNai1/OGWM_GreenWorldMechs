@@ -8,12 +8,18 @@ public class MechPuppetPartController : MonoBehaviour
     //custom inspector elements at play here - see MechPuppetControllerEditor.cs
     public enum PartType { Legs, Core, Head, RArm, LArm, LWeapon, RWeapon, RShoulder, LShoulder, Generator, Targetting, Booster, Extension, Ground_NotAPart, Empty_NotAPart}
 
+    [SerializeField] private string _partName;
+    public string partName
+    {
+        get { return _partName; }
+        set { _partName = value; }
+    }
+
     [SerializeField] private PartType _partType;
 #if UNITY_EDITOR
     private PartType _previousPartType; // Store the previous PartType to detect changes
 #endif
-    [SerializeField] private string _partName;
-
+    
     public PartType partType
     {
         get { return _partType; }
