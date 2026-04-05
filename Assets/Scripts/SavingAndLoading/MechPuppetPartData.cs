@@ -1,6 +1,10 @@
 using System;
 using UnityEngine;
 
+
+/// <summary>
+/// Shape of Mech Part Data, for saving and loading.
+/// </summary>
 [Serializable]
 public class MechPuppetPartData
 {

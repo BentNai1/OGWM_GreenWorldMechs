@@ -1876,11 +1876,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[6].x
-      value: 4.55
+      value: 4.941336
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[6].y
-      value: -0.25726742
+      value: -1.7765704
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[7].x
@@ -1892,7 +1892,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
       propertyPath: _hardPointPositions.Array.data[8].x
-      value: 5.03
+      value: 4.960941
+      objectReference: {fileID: 0}
+    - target: {fileID: 3773845997375470320, guid: 348e4083541ebe6478873f10b9e7f7dc, type: 3}
+      propertyPath: _hardPointPositions.Array.data[8].y
+      value: 2.4170732
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
