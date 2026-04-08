@@ -1,0 +1,26 @@
+
+====================DATE================
+
+4/7/26
+
+-----------------Completed----------------
+//Created log file
+
+
+----------------Next Steps----------------
+1. UI to allow each part to change to another part from a list.
+	a. new sub-list of "available parts", with the only one for now: "all parts." List determines what parts are available.
+	b. dropdown menu to select parts, should have the name, slot(s), and a picture of the part.
+		i. going to need to figure out behavior for parts that take up multiple slots - and likely a filter to allow/diallow parts that use multiple slots ("chimera" parts).
+2. Sprite property for parts
+	a. Seperate garage preview for current full sprite (built from parts)
+	b. Sprite property for parts (array, so it can handle "chimera" parts)
+	c. Color picker to customize colors of sprite
+3. 
+----------------Log today-----------------
+
+Realized I have need for a devlog to keep track of my thoughts, and future plans.
+
+
+
+END
