@@ -3,6 +3,8 @@
 # -----------------Completed----------------
 //More work on UI
 
+// baseline aspect ratio read script works! 
+
 
 # ----------------Next Steps----------------
 1. UI to allow each part to change to another part from a list.
@@ -22,6 +24,7 @@
 	[ ] Color picker to customize colors of sprite
 
 # ----------------Log today-----------------
+
 
 
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^END^^^^^^^^^^^^^^^^^^^^^^^^^^^^^# ============================== 4/11/26 ==========================
